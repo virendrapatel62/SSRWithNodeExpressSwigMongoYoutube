@@ -1,0 +1,17 @@
+{% extends 'layouts/page-layout.html' %}
+
+{% block title %} User Details {% endblock %}
+{% block page %}
+<div>
+  <h1>Users Details</h1>
+  <hr />
+
+  <div>
+    <h1>THis is user detail page</h1>
+
+    {% include './users/user-card.html' with user %}
+
+  </div>
+</div>
+
+{% endblock %}
