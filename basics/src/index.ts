@@ -6,8 +6,10 @@ import {
 } from "./controllers/user";
 import swig from "swig";
 import minifier from "html-minifier";
+import path from "path";
 
 const app = express();
+app.use(express.static(path.join(__dirname, "../public")));
 
 swig.setDefaults({
   cache: false,

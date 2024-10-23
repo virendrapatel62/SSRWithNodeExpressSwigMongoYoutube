@@ -10,7 +10,8 @@ export function getAllUsersController(request: Request, response: Response) {
       return response.json();
     })
     .then((users: IUser[]) => {
-      return users.filter((user) => user.name.includes(search));
+      if (search) return users.filter((user) => user.name.includes(search));
+      return users;
     })
     .then((users: IUser[]) => {
       if (sortBy) {
@@ -19,8 +20,6 @@ export function getAllUsersController(request: Request, response: Response) {
         if (isDesc) {
           keyName = sortBy.substring(1, sortBy.length);
         }
-
-        console.log({ keyName });
 
         return users.sort((u1, u2) => {
           return !isDesc
