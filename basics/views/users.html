@@ -1,0 +1,13 @@
+{% extends 'layouts/page-layout.html' %}
+
+{% block title %} User list {% endblock %}
+{% block page %}
+<div>
+  <h1>Users List</h1>
+  <hr />
+
+  <div>
+    {% include "./users/users-grid.html" %}
+  </div>
+</div>
+{% endblock %}

@@ -3,16 +3,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node build/src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "@types/express": "^5.0.0",
+    "@types/html-minifier": "^4.0.5",
+    "@types/node": "^22.7.7",
+    "@types/swig": "^0.0.34",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   },
   "dependencies": {
-    "express": "^4.21.1"
+    "ejs": "^3.1.10",
+    "express": "^5.0.1",
+    "html-minifier": "^4.0.0",
+    "swig": "^1.4.2"
   }
 }
