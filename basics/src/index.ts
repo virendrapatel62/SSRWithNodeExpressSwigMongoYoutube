@@ -1,15 +1,23 @@
 import express from "express";
 import { homePageController } from "./controllers/home";
 import {
+  addUserController,
+  addUserPageController,
   getAllUsersController,
   getUserByIdController,
 } from "./controllers/user";
 import swig from "swig";
 import minifier from "html-minifier";
 import path from "path";
+import bodyParser from "body-parser";
 
 const app = express();
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
 swig.setDefaults({
   cache: false,
@@ -49,5 +57,8 @@ app.listen(3000, () => {
 });
 
 app.get("/", homePageController);
+
 app.get("/users", getAllUsersController);
+app.get("/users/add", addUserPageController);
+app.post("/users/add", addUserController);
 app.get("/users/:userId", getUserByIdController);

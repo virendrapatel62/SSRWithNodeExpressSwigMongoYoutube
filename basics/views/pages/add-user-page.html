@@ -1,0 +1,57 @@
+{% extends '../layouts/page-layout.html' %}
+<!-- title -->
+
+{% block title %} User Create {% endblock %}
+
+<!-- page content -->
+{% block page %}
+<div>
+  <h1>Add New User</h1>
+  <hr />
+  <div class="form-container">
+    <form method="post">
+      <div class="form-input">
+        <label for="name">Name</label>
+        <input name="name" type="text" id="name" placeholder="Enter Name" />
+      </div>
+
+      <div class="form-input">
+        <label for="email">Email</label>
+        <input
+          name="email"
+          type="text"
+          id="email"
+          placeholder="email@gmail.com"
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="username">UserName</label>
+        <input
+          name="username"
+          type="text"
+          id="username"
+          placeholder="virendra"
+        />
+      </div>
+
+      <div class="form-input">
+        <button type="submit">Add User</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .form-container {
+    width: 80%;
+    margin: auto;
+    border: 1px solid rgb(211, 207, 207);
+    padding: 16px;
+    border-radius: 8px;
+  }
+</style>
+
+<link rel="stylesheet" href="/css/forms.css" />
+
+{% endblock %}

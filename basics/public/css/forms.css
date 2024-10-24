@@ -1,0 +1,23 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: 16px;
+}
+
+.form-input input[type="text"] {
+  height: 30px;
+  width: 100%;
+  border: 1px solid rgb(194, 189, 189);
+  border-radius: 4px;
+}
+
+.form-input button {
+  padding: 8px;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  max-width: 300px;
+}
