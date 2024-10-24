@@ -41,7 +41,7 @@ export function getAllUsersController(request: Request, response: Response) {
     });
   }
 
-  response.render("users.html", {
+  response.render("pages/users.html", {
     users: _users,
   });
 }

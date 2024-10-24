@@ -1,15 +1,7 @@
 <!-- USER GRID START -->
 <div class="users">
-
-    {% for user in users %}
-    {% include './user-card.html' with user %}
-    {% endfor %}
-
-
-
+  {% for user in users %} {% include 'users/user-card.html' with user %} {%
+  endfor %}
 </div>
-
-
-
 
 <!-- USER GRID END -->

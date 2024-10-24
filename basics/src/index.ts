@@ -21,6 +21,7 @@ app.use(
 
 swig.setDefaults({
   cache: false,
+  loader: swig.loaders.fs(path.join(__dirname, "../views")),
 });
 
 app.set("view engine", "html");

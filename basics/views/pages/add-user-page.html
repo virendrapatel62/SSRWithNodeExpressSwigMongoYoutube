@@ -1,4 +1,4 @@
-{% extends '../layouts/page-layout.html' %}
+{% extends 'layouts/page-layout.html' %}
 <!-- title -->
 
 {% block title %} User Create {% endblock %}
@@ -19,8 +19,8 @@
         <label for="name">Name</label>
         <input name="name" type="text" id="name" placeholder="Enter Name" />
 
-        {% include '../components/ui/form-error.html' with { message :
-        errors.name} %}
+        {% include 'components/ui/form-error.html' with { message : errors.name}
+        %}
       </div>
 
       <div class="form-input">
@@ -31,7 +31,7 @@
           id="email"
           placeholder="email@gmail.com"
         />
-        {% include '../components/ui/form-error.html' with { message :
+        {% include 'components/ui/form-error.html' with { message :
         errors.email} only %}
       </div>
 
@@ -44,7 +44,7 @@
           placeholder="virendra"
         />
 
-        {% include '../components/ui/form-error.html' with { message :
+        {% include 'components/ui/form-error.html' with { message :
         errors.username} %}
       </div>
 
