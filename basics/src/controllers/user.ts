@@ -64,10 +64,32 @@ export function addUserPageController(request: Request, response: Response) {
 export function addUserController(request: Request, response: Response) {
   const user = request.body;
 
+  const errors: Record<string, string> = {};
+
+  if (!user.name?.trim()) {
+    errors.name = "Enter Name";
+  }
+  if (!user.email?.trim()) {
+    errors.email = "Enter Email";
+  }
+  if (!user.username?.trim()) {
+    errors.username = "Enter Username";
+  }
+
+  const hasErrors = Object.keys(errors).length;
+
+  if (hasErrors) {
+    return response.render("pages/add-user-page.html", {
+      errors: errors,
+    });
+  }
+
   users.push({
     ...user,
     id: Date.now(),
   });
 
-  response.render("pages/add-user-page.html");
+  response.render("pages/add-user-page.html", {
+    message: "User created",
+  });
 }

@@ -10,3 +10,15 @@ main {
   width: 90%;
   margin: auto;
 }
+
+.error {
+  color: rgb(182, 63, 63);
+}
+
+.sucess-alert {
+  border: 1px solid rgb(80, 170, 80);
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(80, 170, 80, 0.461);
+  color: 1px solid rgb(51, 127, 51);
+}

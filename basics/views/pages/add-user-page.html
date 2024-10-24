@@ -8,11 +8,19 @@
 <div>
   <h1>Add New User</h1>
   <hr />
+
   <div class="form-container">
+    <p class="sucess-alert" style="display: {{!message && 'none' }}">
+      {{message}}
+    </p>
+
     <form method="post">
       <div class="form-input">
         <label for="name">Name</label>
         <input name="name" type="text" id="name" placeholder="Enter Name" />
+
+        {% include '../components/ui/form-error.html' with { message :
+        errors.name} %}
       </div>
 
       <div class="form-input">
@@ -23,6 +31,8 @@
           id="email"
           placeholder="email@gmail.com"
         />
+        {% include '../components/ui/form-error.html' with { message :
+        errors.email} only %}
       </div>
 
       <div class="form-input">
@@ -33,6 +43,9 @@
           id="username"
           placeholder="virendra"
         />
+
+        {% include '../components/ui/form-error.html' with { message :
+        errors.username} %}
       </div>
 
       <div class="form-input">
