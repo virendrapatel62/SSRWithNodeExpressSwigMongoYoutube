@@ -1,3 +1,4 @@
+import "./db";
 import express from "express";
 import { homePageController } from "./controllers/home";
 import {
