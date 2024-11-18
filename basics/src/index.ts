@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import "./db";
 import express from "express";
 import { homePageController } from "./controllers/home";
@@ -53,9 +56,9 @@ app.engine("html", (path, object, cb) => {
   );
 });
 
-app.listen(3000, () => {
-  console.log("Listening on port 300");
-  console.log("Visit http://localhost:3000");
+app.listen(process.env.PORT, () => {
+  console.log("Listening on port ", process.env.PORT);
+  console.log(`Visit http://localhost:${process.env.PORT}`);
 });
 
 app.get("/", homePageController);

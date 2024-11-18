@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const url = `mongodb+srv://patelvirendra62:Bddk2jXu5GQPnBW3@learningclustor01.5qlnc.mongodb.net/ecom?retryWrites=true&w=majority&appName=LearningClustor01`;
 
 mongoose.connect(url).then(() => {
